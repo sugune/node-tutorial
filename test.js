@@ -1,4 +1,4 @@
-const boolean = true;
+let boolean = false;
 
 if (boolean) {
   console.log('hello world')
@@ -6,4 +6,15 @@ if (boolean) {
   console.log('goodbye world')
 }
 
-console.log('i like myka');
+const message1 = 'i love myka';
+const message2 = 'i like myka';
+
+setInterval(() => {
+  if (boolean) {
+    console.log(message1);
+    boolean = false;
+  } else {
+    console.log(message2)
+    boolean = true;
+  }
+}, 100)
